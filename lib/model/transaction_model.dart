@@ -4,7 +4,7 @@ import 'package:hive/hive.dart';
 part 'transaction_model.g.dart';
 
 @HiveType(typeId: 0)
-class Transaction {
+class TransactionModel {
   @HiveField(0)
   final String id;
   @HiveField(1)
@@ -14,7 +14,7 @@ class Transaction {
   @HiveField(3)
   final DateTime date;
 
-  Transaction({
+  TransactionModel({
     @required this.id,
     @required this.title,
     @required this.amount,

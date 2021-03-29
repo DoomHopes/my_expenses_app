@@ -6,17 +6,17 @@ part of 'transaction_model.dart';
 // TypeAdapterGenerator
 // **************************************************************************
 
-class TransactionAdapter extends TypeAdapter<Transaction> {
+class TransactionAdapter extends TypeAdapter<TransactionModel> {
   @override
   final int typeId = 0;
 
   @override
-  Transaction read(BinaryReader reader) {
+  TransactionModel read(BinaryReader reader) {
     final numOfFields = reader.readByte();
     final fields = <int, dynamic>{
       for (int i = 0; i < numOfFields; i++) reader.readByte(): reader.read(),
     };
-    return Transaction(
+    return TransactionModel(
       id: fields[0] as String,
       title: fields[1] as String,
       amount: fields[2] as double,
@@ -25,7 +25,7 @@ class TransactionAdapter extends TypeAdapter<Transaction> {
   }
 
   @override
-  void write(BinaryWriter writer, Transaction obj) {
+  void write(BinaryWriter writer, TransactionModel obj) {
     writer
       ..writeByte(4)
       ..writeByte(0)

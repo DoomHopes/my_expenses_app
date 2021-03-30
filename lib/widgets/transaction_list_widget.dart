@@ -44,7 +44,7 @@ class TransactionList extends StatelessWidget {
                           padding: EdgeInsets.all(6),
                           child: FittedBox(
                             child: Text(
-                                '\$${providerData.workList[index].amount}'),
+                                '\$${providerData.workList[index].amount.toDouble()}'),
                           ),
                         ),
                       ),
@@ -53,8 +53,8 @@ class TransactionList extends StatelessWidget {
                         style: Theme.of(context).textTheme.title,
                       ),
                       subtitle: Text(
-                        DateFormat.yMMMd()
-                            .format(providerData.workList[index].date),
+                        DateFormat.yMMMd().format(
+                            providerData.workList[index].date.toLocal()),
                       ),
                       trailing: IconButton(
                         icon: Icon(Icons.delete),

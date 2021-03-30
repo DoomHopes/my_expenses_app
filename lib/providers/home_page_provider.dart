@@ -6,8 +6,8 @@ class HomePageProvider extends ChangeNotifier {
   List<TransactionModel> workList = [];
   final hive = DataBaseHive();
 
-  void getList() {
-    workList = hive.getListFromHive();
+  Future<void> getList() async {
+    workList = await hive.getListFromHive();
     notifyListeners();
   }
 
@@ -17,9 +17,9 @@ class HomePageProvider extends ChangeNotifier {
     notifyListeners();
   }
 
-  void deleteById(String id) {
-    workList.remove(id);
+  void deleteById(TransactionModel transactionModel) {
+    workList.remove(transactionModel);
     notifyListeners();
-    hive.deleteById(id);
+    hive.deleteById(transactionModel.id);
   }
 }

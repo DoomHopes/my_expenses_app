@@ -14,7 +14,8 @@ class DataBaseHive {
     return _model;
   }
 
-  List<TransactionModel> getListFromHive() {
+  Future<List<TransactionModel>> getListFromHive() async {
+    await Hive.openBox<TransactionModel>('modelbox');
     final List<TransactionModel> _list = [];
     final length = getHiveLength();
     for (int i = 0; i < length; i++) {

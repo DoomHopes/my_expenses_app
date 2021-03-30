@@ -60,7 +60,7 @@ class TransactionList extends StatelessWidget {
                         icon: Icon(Icons.delete),
                         color: Theme.of(context).errorColor,
                         onPressed: () => providerData
-                            .deleteById(providerData.workList[index].id),
+                            .deleteById(providerData.workList[index]),
                       ),
                     ),
                   );

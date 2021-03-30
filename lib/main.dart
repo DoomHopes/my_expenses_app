@@ -7,8 +7,8 @@ import 'package:provider/provider.dart';
 import 'model/transaction_model.dart';
 import 'providers/home_page_provider.dart';
 
-void main() {
-  initHiveForApp();
+Future<void> main() async {
+  await initHiveForApp();
   runApp(MyApp());
 }
 

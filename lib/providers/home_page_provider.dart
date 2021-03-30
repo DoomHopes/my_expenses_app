@@ -17,9 +17,9 @@ class HomePageProvider extends ChangeNotifier {
     notifyListeners();
   }
 
-  void deleteById(TransactionModel transactionModel) {
+  void delete(TransactionModel transactionModel, int index) {
     workList.remove(transactionModel);
+    hive.delete(index);
     notifyListeners();
-    hive.deleteById(transactionModel.id);
   }
 }

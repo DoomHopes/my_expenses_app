@@ -30,7 +30,7 @@ class MyApp extends StatelessWidget {
         ),
       ],
       child: MaterialApp(
-        title: 'Flutter Demo',
+        title: 'Expenses App',
         theme: ThemeData.dark(),
         debugShowCheckedModeBanner: false,
         home: HomePage(),

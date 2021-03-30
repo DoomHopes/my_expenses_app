@@ -44,7 +44,9 @@ class _NewTransactionState extends State<NewTransaction> {
       lastDate: DateTime.now(),
     ).then((pickedDate) {
       if (pickedDate == null) {
-        return;
+        setState(() {
+          _selectedDate = DateTime.now();
+        });
       }
       setState(() {
         _selectedDate = pickedDate;

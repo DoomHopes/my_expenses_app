@@ -1,7 +1,5 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:hive/hive.dart';
-import 'package:my_expenses_app/model/transaction_model.dart';
 import 'package:my_expenses_app/providers/home_page_provider.dart';
 import 'package:my_expenses_app/widgets/chart_widget.dart';
 import 'package:my_expenses_app/widgets/new_transaction_widget.dart';

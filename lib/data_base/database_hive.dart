@@ -33,4 +33,9 @@ class DataBaseHive {
     final _modelBox = Hive.box<TransactionModel>('modelbox');
     _modelBox.deleteFromDisk();
   }
+
+  void deleteById(String id) {
+    final _modelBox = Hive.box<TransactionModel>('modelbox');
+    _modelBox.delete(id);
+  }
 }
